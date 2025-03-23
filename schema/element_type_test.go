@@ -45,6 +45,18 @@ func TestElementType_Equal(t *testing.T) {
 			},
 			expected: false,
 		},
+		"int32_nil_other_not_nil": {
+			other: schema.ElementType{
+				Int32: &schema.Int32Type{},
+			},
+			expected: false,
+		},
+		"int32_not_nil_other_nil": {
+			elementType: schema.ElementType{
+				Int32: &schema.Int32Type{},
+			},
+			expected: false,
+		},
 		"int64_nil_other_not_nil": {
 			other: schema.ElementType{
 				Int64: &schema.Int64Type{},
