@@ -105,6 +105,9 @@
             "$ref": "#/$defs/datasource_int64_attribute"
           },
           {
+            "$ref": "#/$defs/datasource_int32_attribute"
+          },
+          {
             "$ref": "#/$defs/datasource_list_attribute"
           },
           {
@@ -203,6 +206,9 @@
           },
           {
             "$ref": "#/$defs/provider_int64_attribute"
+          },
+          {
+            "$ref": "#/$defs/provider_int32_attribute"
           },
           {
             "$ref": "#/$defs/provider_list_attribute"
@@ -305,6 +311,9 @@
           },
           {
             "$ref": "#/$defs/resource_int64_attribute"
+          },
+          {
+            "$ref": "#/$defs/resource_int32_attribute"
           },
           {
             "$ref": "#/$defs/resource_list_attribute"
@@ -429,6 +438,9 @@
         "int64": {
           "$ref": "#/$defs/schema_int64_type"
         },
+        "int32": {
+          "$ref": "#/$defs/schema_int32_type"
+        },
         "list": {
           "$ref": "#/$defs/schema_list_type"
         },
@@ -462,6 +474,11 @@
         {
           "required": [
             "int64"
+          ]
+        },
+        {
+          "required": [
+            "int32"
           ]
         },
         {
@@ -506,6 +523,15 @@
       }
     },
     "schema_int64_type": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "custom_type": {
+          "$ref": "#/$defs/schema_custom_type"
+        }
+      }
+    },
+    "schema_int32_type": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -579,6 +605,9 @@
         "int64": {
           "$ref": "#/$defs/schema_int64_type"
         },
+        "int32": {
+          "$ref": "#/$defs/schema_int32_type"
+        },
         "list": {
           "$ref": "#/$defs/schema_list_type"
         },
@@ -620,6 +649,11 @@
         {
           "required": [
             "int64"
+          ]
+        },
+        {
+          "required": [
+            "int32"
           ]
         },
         {
@@ -860,6 +894,49 @@
       "required": [
         "name",
         "float64"
+      ]
+    },
+    "datasource_int32_attribute": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/valid_identifier"
+        },
+        "int32": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "associated_external_type": {
+              "$ref": "#/$defs/schema_associated_external_type"
+            },
+            "computed_optional_required": {
+              "$ref": "#/$defs/schema_computed_optional_required"
+            },
+            "custom_type": {
+              "$ref": "#/$defs/schema_custom_type"
+            },
+            "deprecation_message": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "sensitive": {
+              "type": "boolean"
+            },
+            "validators": {
+              "$ref": "#/$defs/schema_int32_validators"
+            }
+          },
+          "required": [
+            "computed_optional_required"
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "int32"
       ]
     },
     "datasource_int64_attribute": {
@@ -1635,6 +1712,49 @@
       "required": [
         "name",
         "float64"
+      ]
+    },
+    "provider_int32_attribute": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/valid_identifier"
+        },
+        "int32": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "associated_external_type": {
+              "$ref": "#/$defs/schema_associated_external_type"
+            },
+            "custom_type": {
+              "$ref": "#/$defs/schema_custom_type"
+            },
+            "deprecation_message": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "optional_required": {
+              "$ref": "#/$defs/schema_optional_required"
+            },
+            "sensitive": {
+              "type": "boolean"
+            },
+            "validators": {
+              "$ref": "#/$defs/schema_int32_validators"
+            }
+          },
+          "required": [
+            "optional_required"
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "int32"
       ]
     },
     "provider_int64_attribute": {
@@ -2434,6 +2554,55 @@
       "required": [
         "name",
         "float64"
+      ]
+    },
+    "resource_int32_attribute": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/valid_identifier"
+        },
+        "int32": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "associated_external_type": {
+              "$ref": "#/$defs/schema_associated_external_type"
+            },
+            "computed_optional_required": {
+              "$ref": "#/$defs/schema_computed_optional_required"
+            },
+            "custom_type": {
+              "$ref": "#/$defs/schema_custom_type"
+            },
+            "default": {
+              "$ref": "#/$defs/schema_int32_default"
+            },
+            "deprecation_message": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "plan_modifiers": {
+              "$ref": "#/$defs/schema_int32_plan_modifiers"
+            },
+            "sensitive": {
+              "type": "boolean"
+            },
+            "validators": {
+              "$ref": "#/$defs/schema_int32_validators"
+            }
+          },
+          "required": [
+            "computed_optional_required"
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "int32"
       ]
     },
     "resource_int64_attribute": {
@@ -3357,6 +3526,40 @@
         }
       ]
     },
+    "schema_int32_default": {
+      "type": "object",
+      "properties": {
+        "custom": {
+          "$ref": "#/$defs/schema_custom_default"
+        },
+        "static": {
+          "type": "number"
+        }
+      },
+      "oneOf": [
+        {
+          "required": [
+            "custom"
+          ]
+        },
+        {
+          "required": [
+            "static"
+          ]
+        }
+      ]
+    },
+    "schema_int32_plan_modifier": {
+      "type": "object",
+      "properties": {
+        "custom": {
+          "$ref": "#/$defs/schema_custom_plan_modifier"
+        }
+      },
+      "required": [
+        "custom"
+      ]
+    },
     "schema_int64_plan_modifier": {
       "type": "object",
       "properties": {
@@ -3374,7 +3577,24 @@
         "$ref": "#/$defs/schema_int64_plan_modifier"
       }
     },
+    "schema_int32_plan_modifiers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/schema_int32_plan_modifier"
+      }
+    },
     "schema_int64_validator": {
+      "type": "object",
+      "properties": {
+        "custom": {
+          "$ref": "#/$defs/schema_custom_validator"
+        }
+      },
+      "required": [
+        "custom"
+      ]
+    },
+    "schema_int32_validator": {
       "type": "object",
       "properties": {
         "custom": {
@@ -3389,6 +3609,12 @@
       "type": "array",
       "items": {
         "$ref": "#/$defs/schema_int64_validator"
+      }
+    },
+    "schema_int32_validators": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/schema_int32_validator"
       }
     },
     "schema_list_default": {
