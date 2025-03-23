@@ -1,4 +1,4 @@
-module github.com/hashicorp/terraform-plugin-codegen-spec
+module github.com/greatman/terraform-plugin-codegen-spec
 
 go 1.22.0
 
