@@ -78,6 +78,7 @@ type Attribute struct {
 	Bool         *BoolAttribute         `json:"bool,omitempty"`
 	Dynamic      *DynamicAttribute      `json:"dynamic,omitempty"`
 	Float64      *Float64Attribute      `json:"float64,omitempty"`
+	Int32        *Int32Attribute        `json:"int32,omitempty"`
 	Int64        *Int64Attribute        `json:"int64,omitempty"`
 	List         *ListAttribute         `json:"list,omitempty"`
 	ListNested   *ListNestedAttribute   `json:"list_nested,omitempty"`
@@ -164,6 +165,45 @@ type DynamicAttribute struct {
 	// Validators define types and functions that provide validation
 	// functionality for the attribute.
 	Validators schema.DynamicValidators `json:"validators,omitempty"`
+}
+
+// Int32Attribute represents a schema attribute that is a 32-bit
+// integer.
+//
+// Use NumberAttribute for a 512-bit generic number attribute.
+type Int32Attribute struct {
+	// AssociatedExternalType defines a Go type that can be used to represent a Int64Attribute.
+	AssociatedExternalType *schema.AssociatedExternalType `json:"associated_external_type,omitempty"`
+
+	// ComputedOptionalRequired indicates whether the attribute is required
+	// (`required`), optional (`optional`), computed (`computed`), or
+	// computed and optional (`computed_optional`).
+	ComputedOptionalRequired schema.ComputedOptionalRequired `json:"computed_optional_required"`
+
+	// CustomType defines a custom type and value for the attribute.
+	CustomType *schema.CustomType `json:"custom_type,omitempty"`
+
+	// Default defines a default value for the attribute.
+	Default *schema.Int32Default `json:"default,omitempty"`
+
+	// DeprecationMessage defines a message describing that the attribute
+	// is deprecated.
+	DeprecationMessage *string `json:"deprecation_message,omitempty"`
+
+	// Description defines the purpose and usage of the attribute.
+	Description *string `json:"description,omitempty"`
+
+	// PlanModifiers define types and functions that provide plan modification
+	// functionality for the attribute.
+	PlanModifiers schema.Int32PlanModifiers `json:"plan_modifiers,omitempty"`
+
+	// Sensitive indicates whether the value of the attribute should
+	// be considered sensitive data.
+	Sensitive *bool `json:"sensitive,omitempty"`
+
+	// Validators define types and functions that provide validation
+	// functionality for the block.
+	Validators schema.Int32Validators `json:"validators,omitempty"`
 }
 
 // Float64Attribute represents a Schema attribute that is a 64-bit
