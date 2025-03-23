@@ -113,6 +113,18 @@ func TestObjectAttributeType_Equal(t *testing.T) {
 			},
 			expected: false,
 		},
+		"int32_nil_other_not_nil": {
+			other: schema.ObjectAttributeType{
+				Int32: &schema.Int32Type{},
+			},
+			expected: false,
+		},
+		"int32_not_nil_other_nil": {
+			objectAttributeType: schema.ObjectAttributeType{
+				Int32: &schema.Int32Type{},
+			},
+			expected: false,
+		},
 		"int64_nil_other_not_nil": {
 			other: schema.ObjectAttributeType{
 				Int64: &schema.Int64Type{},
