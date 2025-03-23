@@ -8,7 +8,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/hashicorp/terraform-plugin-codegen-spec/schema"
+	"github.com/greatman/terraform-plugin-codegen-spec/schema"
 )
 
 // BlockValidateRequest defines the Path of the block that is

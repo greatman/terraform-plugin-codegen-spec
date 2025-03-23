@@ -6,7 +6,7 @@ package schema
 import (
 	"sort"
 
-	"github.com/hashicorp/terraform-plugin-codegen-spec/code"
+	"github.com/greatman/terraform-plugin-codegen-spec/code"
 )
 
 // CustomDefault defines a custom type for a default schema value.

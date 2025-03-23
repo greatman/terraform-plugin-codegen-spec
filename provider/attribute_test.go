@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/hashicorp/terraform-plugin-codegen-spec/provider"
-	"github.com/hashicorp/terraform-plugin-codegen-spec/schema"
+	"github.com/greatman/terraform-plugin-codegen-spec/provider"
+	"github.com/greatman/terraform-plugin-codegen-spec/schema"
 )
 
 func TestAttributes_Validate(t *testing.T) {

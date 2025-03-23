@@ -3,7 +3,7 @@
 
 package schema
 
-import "github.com/hashicorp/terraform-plugin-codegen-spec/code"
+import "github.com/greatman/terraform-plugin-codegen-spec/code"
 
 // AssociatedExternalType type represents a type used by an
 // external API SDK that represents the schema type.

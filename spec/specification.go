@@ -7,9 +7,9 @@ import (
 	"context"
 	"errors"
 
-	"github.com/hashicorp/terraform-plugin-codegen-spec/datasource"
-	"github.com/hashicorp/terraform-plugin-codegen-spec/provider"
-	"github.com/hashicorp/terraform-plugin-codegen-spec/resource"
+	"github.com/greatman/terraform-plugin-codegen-spec/datasource"
+	"github.com/greatman/terraform-plugin-codegen-spec/provider"
+	"github.com/greatman/terraform-plugin-codegen-spec/resource"
 )
 
 // Specification defines the data source(s), provider, and resource(s) for

@@ -3,7 +3,7 @@
 
 package schema
 
-import "github.com/hashicorp/terraform-plugin-codegen-spec/code"
+import "github.com/greatman/terraform-plugin-codegen-spec/code"
 
 // CustomType defines a custom type, and value type for a schema type,
 // and associated value.

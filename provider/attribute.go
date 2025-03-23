@@ -8,7 +8,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/hashicorp/terraform-plugin-codegen-spec/schema"
+	"github.com/greatman/terraform-plugin-codegen-spec/schema"
 )
 
 // AttributeValidateRequest defines the Path of the attribute that is

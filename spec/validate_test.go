@@ -9,7 +9,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/hashicorp/terraform-plugin-codegen-spec/spec"
+	"github.com/greatman/terraform-plugin-codegen-spec/spec"
 )
 
 func TestValidate_Version0_1(t *testing.T) {

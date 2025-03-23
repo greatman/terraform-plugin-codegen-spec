@@ -6,7 +6,7 @@ package schema
 import (
 	"sort"
 
-	"github.com/hashicorp/terraform-plugin-codegen-spec/code"
+	"github.com/greatman/terraform-plugin-codegen-spec/code"
 )
 
 // CustomPlanModifiers type is a slice of *CustomPlanModifier.

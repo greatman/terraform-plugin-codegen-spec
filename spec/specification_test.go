@@ -12,12 +12,12 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"github.com/hashicorp/terraform-plugin-codegen-spec/code"
-	"github.com/hashicorp/terraform-plugin-codegen-spec/datasource"
-	"github.com/hashicorp/terraform-plugin-codegen-spec/provider"
-	"github.com/hashicorp/terraform-plugin-codegen-spec/resource"
-	"github.com/hashicorp/terraform-plugin-codegen-spec/schema"
-	"github.com/hashicorp/terraform-plugin-codegen-spec/spec"
+	"github.com/greatman/terraform-plugin-codegen-spec/code"
+	"github.com/greatman/terraform-plugin-codegen-spec/datasource"
+	"github.com/greatman/terraform-plugin-codegen-spec/provider"
+	"github.com/greatman/terraform-plugin-codegen-spec/resource"
+	"github.com/greatman/terraform-plugin-codegen-spec/schema"
+	"github.com/greatman/terraform-plugin-codegen-spec/spec"
 )
 
 func TestSpecification_JSONMarshal(t *testing.T) {
